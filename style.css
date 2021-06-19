@@ -1,0 +1,144 @@
+html, body {
+  box-sizing: border-box;
+  width:100%;
+  margin: 0;
+  font-size: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color:black;
+}
+
+
+.wrapper {
+  /* background: silver; */
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+
+/* 
+ヘッダー
+*/
+
+header h1 {
+  /* background: hsl( 0, 60%, 60% ); */
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+header a:hover {
+  color: green;
+}
+
+nav {
+  /* background: hsl( 30, 60%, 60% ); */
+  text-align: right;
+}
+
+/* 
+メイン 
+*/
+
+.item-wrapper {
+  /* background: hsl( 60, 60%, 60% ); */
+  display: grid;
+  grid-template-columns: repeat( 2, 40vw );
+  grid-template-rows: repeat( 4, 50vw );
+  gap: 10vw 0;
+  justify-content: space-between;
+}
+
+
+/* .item {
+  background: hsl( 90, 60%, 60% );
+  border: 1px solid black;
+} */
+
+.item:hover {
+  opacity: .7;
+}
+
+.item img {
+  width: 100%;
+}
+
+.item h2 {
+  /* background: hsl( 120, 60%, 60% ); */
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0;
+}
+
+.item p {
+  /* background: hsl( 150, 60%, 60% ); */
+  font-size: 0.7rem;
+  text-align: center;
+  margin:0;
+}
+
+#more {
+  background: green;
+  width: 10vw;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 5px;
+  color:white;
+  text-align: center;
+}
+
+#more:hover {
+  opacity:.7;
+}
+
+#more a {
+  color: white;
+}
+
+/* 
+フッター 
+*/
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  margin: 4px;
+}
+
+footer a:hover {
+  color: green;
+}
+
+/* PC表示 900px以上 */
+@media (min-width: 900px) {
+  /* PC版ヘッダー */
+  #header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* PC版メイン */
+  .item-wrapper {
+    display: grid;
+    grid-template-columns: repeat( 4, 20vw );
+    grid-template-rows: repeat( 2, 25vw );
+    gap: 2vw 0;
+    justify-content: space-between;
+  }
+  /* PC版フッター */
+  #footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
