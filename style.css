@@ -2,6 +2,7 @@ html, body {
   box-sizing: border-box;
   width:100%;
   margin: 0;
+  padding: 0;
   font-size: 100%;
 }
 
@@ -28,6 +29,15 @@ a {
 ヘッダー
 */
 
+#header-wrapper {
+  position: fixed;
+  /* top:0;
+  left: 50%;
+  transform: translateX(-50%); */
+  background: white;
+  /* background: hsl( 180, 60%, 60% ); */
+}
+
 header h1 {
   /* background: hsl( 0, 60%, 60% ); */
   margin-bottom: 5px;
@@ -47,6 +57,14 @@ nav {
 メイン 
 */
 
+#main-wrapper {
+  padding-top: 125px;
+}
+
+.desc {
+  font-size: .6rem;
+}
+
 .item-wrapper {
   /* background: hsl( 60, 60%, 60% ); */
   display: grid;
@@ -55,7 +73,6 @@ nav {
   gap: 10vw 0;
   justify-content: space-between;
 }
-
 
 /* .item {
   background: hsl( 90, 60%, 60% );
@@ -72,27 +89,29 @@ nav {
 
 .item h2 {
   /* background: hsl( 120, 60%, 60% ); */
-  font-size: 1.1rem;
+  font-size: 0.7rem;
   text-align: center;
   margin: 0;
 }
 
 .item p {
   /* background: hsl( 150, 60%, 60% ); */
-  font-size: 0.7rem;
+  font-size: .4rem;
   text-align: center;
   margin:0;
 }
 
+
 #more {
   background: green;
-  width: 10vw;
+  width: 50vw;
   border-radius: 5px;
   margin: 10px auto;
-  padding: 5px;
+  padding: 2px;
   color:white;
   text-align: center;
 }
+
 
 #more:hover {
   opacity:.7;
@@ -128,6 +147,14 @@ footer a:hover {
   }
   
   /* PC版メイン */
+  #main-wrapper {
+    padding-top: 75px;
+  }
+
+  .desc {
+    font-size: .8rem;
+  }
+  
   .item-wrapper {
     display: grid;
     grid-template-columns: repeat( 4, 20vw );
@@ -135,6 +162,14 @@ footer a:hover {
     gap: 2vw 0;
     justify-content: space-between;
   }
+  .item p {
+    font-size: .7rem;
+  }
+  
+  #more {
+    width: 20vw;
+  }
+  
   /* PC版フッター */
   #footer-wrapper {
     display: flex;
