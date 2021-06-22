@@ -74,7 +74,18 @@ nav {
   justify-content: space-between;
 }
 
-/* .item {
+/* items01ページでは、アイテムを6行に増やして12個表示 */
+#item-wrapper12 {
+  /* background: hsl( 60, 60%, 60% ); */
+  grid-template-rows: repeat( 6, 50vw );
+}
+
+/* items02ページでは、アイテム数に合わせて行数を変更 */
+#item-wrapperX {
+  grid-template-rows: repeat( 4, 50vw );
+}
+/* 
+.item {
   background: hsl( 90, 60%, 60% );
   border: 1px solid black;
 } */
@@ -121,6 +132,19 @@ nav {
   color: white;
 }
 
+#pages {
+  display: flex;
+  justify-content: center;
+}
+
+#pages li {
+  margin: 10px;
+}
+
+#pages li a:hover {
+  color: green;
+}
+
 /* 
 フッター 
 */
@@ -150,7 +174,7 @@ footer a:hover {
   #main-wrapper {
     padding-top: 75px;
   }
-
+  
   .desc {
     font-size: .8rem;
   }
@@ -161,6 +185,16 @@ footer a:hover {
     grid-template-rows: repeat( 2, 25vw );
     gap: 2vw 0;
     justify-content: space-between;
+  }
+  
+  /* items01ページでは、アイテムを3行に増やして12個表示 */
+  #item-wrapper12 {
+    grid-template-rows: repeat( 3, 25vw );
+  }
+  
+  /* items02ページでは、アイテム数に合わせて行数を変更 */
+  #item-wrapperX {
+    grid-template-rows: repeat( 2, 25vw );
   }
   .item p {
     font-size: .7rem;
